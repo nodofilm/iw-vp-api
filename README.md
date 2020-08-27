@@ -35,6 +35,10 @@ UART: 921600 Baud, 8N2
 
 Data is sent as Big-Endian. Example, an int32_t made of the bytes arriving in the order of 0A 0B 0C 0D is equal to 0x0A0B0C0D = 168496141.
 
+### Uint8_t Blips
+
+The blip items are tied to buttons. Each time the button is pressed, the integer increases by 1. To follow button presses, you will need to track this value and when it changes, act on the change. 
+
 ### Packet
 
 | Byte | Function | Format                | Example   | Hex |   |
@@ -72,10 +76,10 @@ Data is sent as Big-Endian. Example, an int32_t made of the bytes arriving in th
 | 30   | Iris     | uint16_t              | 2571      | 0B  |   |
 | 31   | Zoom     | uint16_t              |           | 0A  |   |
 | 32   | Zoom     | uint16_t              | 2571      | 0B  |   |
-| 33   | To One   | uint8_t               | 10        | 0A  |   |
-| 34   | Reverse  | uint8_t               | 10        | 0A  |   |
-| 35   | Pause    | uint8_t               | 10        | 0A  |   |
-| 36   | Forward  | uint8_t               | 10        | 0A  |   |
+| 33   | To One   | uint8_t (blip)               | 10        | 0A  |   |
+| 34   | Reverse  | uint8_t (blip)               | 10        | 0A  |   |
+| 35   | Pause    | uint8_t (blip)               | 10        | 0A  |   |
+| 36   | Forward  | uint8_t (blip)              | 10        | 0A  |   |
 | 37   | Reserved |                       |           |     |   |
 | 38   | Reserved |                       |           |     |   |
 | 39   | Reserved |                       |           |     |   |
