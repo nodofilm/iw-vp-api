@@ -2,6 +2,8 @@
 
 The Virtual Production (VP) API from NODO Film Systems.
 
+For hardware requirements such as pin out, see [the hardware repository](https://github.com/nodofilm/iw-hardware).
+
 ### Compatible Firmwares
 This API document is updated as of Inertia Wheels firmware 1.0.0.
 
